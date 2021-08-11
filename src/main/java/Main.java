@@ -9,9 +9,9 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         Scanner s = new Scanner(System.in);
         String userName, password;
-        System.out.println(Colors.BLUE+"Please enter user name ");
+        System.out.println(Colors.BLUE+"Please enter your user name ");
         userName= s.next();
-        System.out.println(Colors.BLUE+"Please enter password");
+        System.out.println(Colors.BLUE+"Please enter your password");
          password= s.next();
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\נעם גודלי\\קבצי התקנה\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
@@ -49,10 +49,10 @@ public class Main {
             System.out.println( Colors.PURPLE+ (i+1) +")" + text);
         }
         System.out.println();
-        System.out.println(Colors.GREEN+"Enter the number of courses that you want");
+        System.out.println(Colors.GREEN+"Enter the number of the course you want to enter");
         int num=s.nextInt();
         while (num<0 || num> (webElements.size()-4)){
-            System.out.println(Colors.GREEN+"Enter the number of courses that you want");
+            System.out.println(Colors.GREEN+"Enter the number of the course you want to enter");
             num=s.nextInt();
         }
        WebElement choice = webElements.get(num-1);
